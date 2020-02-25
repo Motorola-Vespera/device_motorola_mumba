@@ -377,6 +377,9 @@ persist.vendor.nfc.st.multisim_fw_config=true
 # Sim
 keyguard.no_require_sim=true
 
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
 # QTI
 ro.soc.manufacturer=QTI
 
