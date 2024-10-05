@@ -48,6 +48,9 @@ TARGET_PROVIDES_LIBAR_PAL := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := parrot
 
+# Board Info
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Display
 TARGET_SCREEN_DENSITY := 390
 
