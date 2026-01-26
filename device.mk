@@ -285,7 +285,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/parrot/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 202404
