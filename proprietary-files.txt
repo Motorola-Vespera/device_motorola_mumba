@@ -1577,8 +1577,8 @@ vendor/lib64/vendor.qti.syshealthmon-V1-ndk.so
 system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
-# RIL - IMS (Patched)
-system_ext/priv-app/ims/ims.apk|f1f76a15847041b28d656ba8340b1ae7021cc777
+# RIL - IMS
+system_ext/priv-app/ims/ims.apk
 
 # RIL - IMS - system_ext
 system_ext/app/ImsRcsService/ImsRcsService.apk
