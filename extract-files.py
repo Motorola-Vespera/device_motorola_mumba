@@ -162,6 +162,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/soundfx/libswspatializeraidl.so',
     ): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'product/priv-app/MotCamera5/MotCamera5.apk': blob_fixup()
+        .apktool_patch('camera-patches'),
 } # fmt: skip
 
 extract_fns: extract_fns_user_type = {
