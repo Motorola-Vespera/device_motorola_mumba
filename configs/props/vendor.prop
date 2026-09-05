@@ -158,6 +158,7 @@ ro.camera.enableCamera1MaxZsl=1
 ro.camerax.extensions.enabled=true
 camera.disable_zsl_mode=1
 persist.vendor.camera.physical.num=3
+persist.vendor.camera.privapp.list=com.motorola.camera5,com.android.DeviceAsWebcam
 
 # Display
 debug.egl.hw=0

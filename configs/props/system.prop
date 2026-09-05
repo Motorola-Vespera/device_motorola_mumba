@@ -19,6 +19,12 @@ persist.vendor.overlay.izat.optin=rro
 # Health
 ro.charger.enable_suspend=1
 
+# Google Lens
+ro.com.google.lens.oem_camera_package=com.android.camera
+
+# Framework allowlists
+persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
+
 # Media
 debug.stagefright.ccodec=1
 media.aac_51_output_enabled=true
