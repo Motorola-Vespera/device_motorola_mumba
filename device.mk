@@ -14,6 +14,9 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+# GameBar Performance Overlay
+$(call inherit-product, packages/apps/GameBar/gamebar.mk)
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -454,6 +457,3 @@ PRODUCT_PACKAGES += \
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/mumba/mumba-vendor.mk)
 $(call inherit-product, vendor/motorola/mumba-motcamera/mumba-motcamera-vendor.mk
-
-# Inherit DolbyAtmos
-$(call inherit-product-if-exists, hardware/dolby/aidl-dolby.mk)
