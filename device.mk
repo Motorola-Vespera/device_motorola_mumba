@@ -456,4 +456,4 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/mumba/mumba-vendor.mk)
-$(call inherit-product, vendor/motorola/mumba-motcamera/mumba-motcamera-vendor.mk
+$(call inherit-product, vendor/motorola/mumba-motcamera/mumba-motcamera-vendor.mk)
