@@ -93,14 +93,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-# DSP Volume Synchronizer
-PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer
-
-# LunarisDolby
-PRODUCT_PACKAGES += \
-    LunarisDolby
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
@@ -211,7 +203,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.mmi.overlay.rc \
     init.qcom.rc \
-    init.dolby.rc \
     init.vendor.st21nfc.rc \
     init.mmi.rc \
     init.qcom.recovery.rc \
@@ -242,7 +233,6 @@ PRODUCT_PACKAGES += \
     WifiResMumba \
     FrameworksResMumba \
     LineageSystemUIMumba \
-    DolbyFrameworksResMumba \
     SettingsResMumba \
     TelephonyResMumba
 
@@ -320,7 +310,6 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.light.xml \
         frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.proximity.xml \
         frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.stepcounter.xml \
-        frameworks/native/data/etc/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml \
         frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.stepdetector.xml \
         frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_parrot/android.hardware.sensor.hifi_sensors.xml
 
@@ -420,8 +409,7 @@ PRODUCT_COPY_FILES += \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/motorola/vintf/device_framework_matrix.xml \
-    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml \
-    $(DEVICE_PATH)/configs/vintf/dolby_framework_matrix.xml
+    $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix_aidl.xml
 DEVICE_MANIFEST_FILE += \
     $(CONFIG_HAL_SRC_DIR)/manifest_audio_qti_services.xml \
@@ -455,3 +443,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/motorola/mumba/mumba-vendor.mk)
+
+# Inherit DolbyAtmos
+$(call inherit-product-if-exists, hardware/dolby/aidl-dolby.mk)
