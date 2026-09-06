@@ -71,3 +71,6 @@ remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
 # Radio
 ro.vendor.radio.imei.sv=24
+
+# Lunaris
+ro.lunaris.maintainer=NoEscape.exe

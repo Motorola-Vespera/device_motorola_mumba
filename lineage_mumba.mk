@@ -17,9 +17,16 @@ PRODUCT_NAME := lineage_mumba
 PRODUCT_DEVICE := mumba
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := Motorola
-PRODUCT_MODEL := G57 Power
+PRODUCT_MODEL := Motorola G57 Power
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+LUNARIS_BUILD_TYPE := OFFICIAL
+WITH_GMS := true
+TARGET_USE_MAPS := true
+TARGET_USE_FILES := true
+USE_REALITY_ENGINE := true
+SURFACE_FLINGER_BOOST := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="mumba_g-user 16 W1WAAS36M.48-12-ST12.1 c557f6 release-keys" \
