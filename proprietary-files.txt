@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Motorola Moto g57 power (mumba) (16 WWAAS36V.48-12-ST12.1-5b6d8).
+## are from Motorola Moto g57 power (mumba) (17 A171WAAH.31-9-4).
 ## variant: RETCN
 
 # ACDB Data
@@ -62,10 +62,14 @@ vendor/lib64/libeai_float.so
 vendor/lib64/libext_tflite_c.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblistensoundmodelaidl.so
+vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libpal_net_if.so
+vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so;DISABLE_DEPS
+vendor/lib64/qti-audio-types-aidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.pal-V1-ndk.so
 
 # Audio configs
 vendor/etc/audio/sku_parrot/audio_effects.xml
@@ -170,6 +174,7 @@ vendor/etc/vintf/manifest/com.motorola.hardware.camera.postprocess-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera/arcsoft_dc_calibration_u.bin
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/camera/arcsoft_dc_calibration_u_2nd.bin
 vendor/lib64/com.motorola.hardware.camera.postprocess-V1-ndk.so
 vendor/lib64/hw/camera.qcom.so
@@ -205,6 +210,7 @@ vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libjpege.so
+vendor/lib64/libmapperutils.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
@@ -228,6 +234,8 @@ vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/libqshcamera.so
+vendor/lib64/libqti_vndfwk_detect.so
+vendor/lib64/libqti_vndfwk_detect_vendor.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtfestriping.so
@@ -270,7 +278,7 @@ vendor/etc/bstconfig/bstai_hdr
 vendor/etc/bstconfig/hdrcfg.cfg
 vendor/etc/camera/arcsoft_calibration_u_dc.bin
 vendor/etc/camera/mot_engine_config.bin
-vendor/etc/vidhance.lic
+vendor/etc/camera/vidhance.lic
 vendor/etc/camera/vidhance_calibration
 vendor/etc/tetras/portrait_repair_composite.model
 vendor/etc/tetras/super_resolution/sr_models.bin
@@ -561,6 +569,13 @@ vendor/lib64/vendor.qti.hardware.data.iwlandata-V2-ndk.so
 vendor/lib64/vendor.qti.hardware.data.lceaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk.so
+system_ext/framework/vendor.qti.data.factoryservice-V3-java.jar
+system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.api-V2-java.jar
+system_ext/framework/vendor.qti.hardware.data.cneaidlservice.internal.server-V2-java.jar
+system_ext/lib64/vendor.qti.data.factoryservice-V3-ndk.so
+system_ext/lib64/vendor.qti.hardware.data.cneaidlservice.internal.api-V2-ndk.so
+system_ext/lib64/vendor.qti.hardware.data.cneaidlservice.internal.server-V2-ndk.so
+system_ext/lib64/vendor.qti.hardware.qacs.ambientdatacapture-V1-ndk.so
 
 # Connection Security
 vendor/bin/qwesd
@@ -708,8 +723,6 @@ product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoog
 product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
-product/etc/permissions/privapp-permissions-hotword.xml|db7c58e204be10d6017df56429cf9842d1300dc2
-product/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml|f5d1e0305c250c70a4aa5ca043a90582ddc0fe2b
 
 # Input
 system/usr/keylayout/gpio-keys.kl:vendor/usr/keylayout/gpio-keys.kl
@@ -811,6 +824,7 @@ vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service
 vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml
 vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
+vendor/lib64/vendor.qti.hardware.servicetrackeraidl-V1-ndk.so
 
 # PSI
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
@@ -834,6 +848,8 @@ vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/lib64/hw/libqtigatekeeper.so
 
 # GNSS
+system_ext/bin/loc_sys_service
+system_ext/etc/init/loc_sys_service.rc
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -844,6 +860,7 @@ vendor/bin/qsap_location
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/apdr.conf
+vendor/etc/flp.conf
 vendor/etc/gnss_antenna_info.conf
 vendor/etc/gps.conf
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
@@ -903,8 +920,10 @@ vendor/lib64/libwifiobserver.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/vendor.qti.gnss-V7-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
+vendor/lib64/wifi_legacy.so
 
 # Performance
+system_ext/etc/perf/scaler_params.pb
 vendor/lib64/libq-perflog.so
 
 # Public libraries
@@ -1275,6 +1294,7 @@ system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
+system_ext/lib64/vendor.qti.qccvndhal_aidl-V2-ndk.so
 
 # QCC (Vendor)
 vendor/bin/qcc-vendor
@@ -1297,15 +1317,18 @@ vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/vintf/manifest/qesdk-manager.xml
 vendor/etc/vintf/manifest/snapdragon_services.xml
+system_ext/lib64/vendor.qti.qesdhalaidl-V3-ndk.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/libqesdoem_query_sys.so
+vendor/lib64/libqti-qesdk-secure.so
 vendor/lib64/vendor.qti.qesdhal-impl.so
 vendor/lib64/vendor.qti.qesdhal@1.0.so
 vendor/lib64/vendor.qti.qesdhal@1.1.so
 vendor/lib64/vendor.qti.qesdhal@1.2.so
 vendor/lib64/vendor.qti.qesdhal@1.3.so
 vendor/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
+vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
 vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 vendor/lib64/vendor.qti.snapdragonServices-V1-ndk.so
 vendor/lib64/vendor.qti.snapdragonServices.qape-V1-ndk.so
@@ -1391,6 +1414,9 @@ vendor/lib64/libqspm-mem-utils-vendor.so
 vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
 vendor/lib64/vendor.qti.qspmhal-impl.so
 
+# Motorola Power
+vendor/lib64/motorola.hardware.power-V2-ndk.so
+
 # Motorola Health
 vendor/bin/hw/motorola.hardware.health-service
 vendor/bin/hw/motorola.hardware.health.storage-service
@@ -1399,7 +1425,7 @@ vendor/etc/init/motorola.hardware.health.storage.service.rc
 vendor/etc/vintf/manifest/motorola.hardware.health.service.xml
 vendor/etc/vintf/manifest/motorola.hardware.health.storage.service.xml
 vendor/lib64/libmotohid.so
-vendor/lib64/motorola.hardware.health.aidl-V1-ndk.so
+vendor/lib64/motorola.hardware.health.aidl-V2-ndk.so
 vendor/lib64/motorola.hardware.health.storage.aidl-V1-ndk.so
 vendor/lib64/motorola.hardware.health.storage@1.0.so
 
@@ -1424,7 +1450,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # RIL - system_ext
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
@@ -1667,7 +1692,6 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
@@ -1675,6 +1699,12 @@ system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so
 system_ext/lib64/vendor.qti.ims.datachannelservice-V3-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/bin/imsvtdaemon
+system_ext/etc/init/imsvtdaemon.rc
+system_ext/etc/seccomp_policy/imsvtdaemon.policy
+system_ext/framework/vendor.qti.ImsVtService-java.jar
+system_ext/lib64/libSurfaceUtil_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libSurfaceUtil_jni.so
+system_ext/lib64/vendor.qti.ImsVtService-ndk.so
 system_ext/priv-app/ims/ims.apk
 
 # RIL - IMS
@@ -1890,6 +1920,8 @@ vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Vibrator
+vendor/lib64/libqtivibratoreffect.so
+vendor/lib64/libqtivibratoreffectoffload.so
 vendor/lib64/vendor.qti.hardware.vibratorCL.impl.so
 vendor/lib64/vendor.qti.hardware.vibratorOL.impl.so
 vendor/lib64/vendor.qti.hardware.vibratorSel.impl.so
@@ -1926,7 +1958,7 @@ system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so
 system_ext/priv-app/WfdService/WfdService.apk
 vendor/bin/tsa_hdcp_service
 vendor/bin/wfdhdcphalservice

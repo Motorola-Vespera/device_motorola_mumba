@@ -131,12 +131,6 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/etc/init/qspa_system.rc': blob_fixup()
         .regex_replace(r'\$\{ro\.boot\.vendor\.qspa:-default\}', 'default'),
     (
-        'system_ext/etc/seccomp_policy/tcmd.policy',
-        'vendor/etc/seccomp_policy/qsap_qapeservice.policy',
-        'vendor/etc/seccomp_policy/syshealthmon.policy',
-    ): blob_fixup()
-        .add_line_if_missing('lseek: 1'),
-    (
         'vendor/etc/audio/sku_parrot/mixer_paths_parrot_qrd.xml',
     ): blob_fixup()
         .regex_replace(
@@ -155,6 +149,7 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+    add_generated_carriersettings_file=True,
     extract_fns=extract_fns,
 )
 
